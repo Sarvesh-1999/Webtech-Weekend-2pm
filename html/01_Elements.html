@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Learn elements in HTML</h1>
+    <!-- 
+    Elements means opening and closing tag with content
+    ex : <h1>hello</h1>
+
+    There are 3 types of elements
+    1) BLOCK 
+        - it takes full width of viewport
+        - it accepts height and width property of css
+        - ex : h1,h2,...h6,p,div
+
+    2) INLINE
+        - it takes content width
+        - it do not accepts height and width property of css
+        - ex : em,strong,del,span
+
+    3) INLINE - BLOCK
+        - it takes content width
+        - it accepts height and width property of css
+        - ex : img, iframe, video
+    -->
+
+    <h2 style="background-color: yellow; height: 100px; width: 300px">
+      block element
+    </h2>
+
+    <h2 style="background-color: aqua; height: 100px; width: 300px">
+      block element
+    </h2>
+
+    <em style="background-color: lightblue; height: 100px"> inline element </em>
+
+    <strong style="background-color: lightgreen"> inline element </strong>
+
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Virat_Kohli_in_PMO_New_Delhi.jpg/500px-Virat_Kohli_in_PMO_New_Delhi.jpg"
+
+      height="200"
+      alt="Virat Kohli"
+    />
+
+    <!-- 
+    path are of two types
+    1) ABSOLUTE PATH : path given directly of the server
+        - ex : https://www.exampleImage.png
+
+    2) RELATIVE PATH :  path given from workspace
+        - ex : ./ (same folder) OR ../ ( one folder back ) OR / (root folder)
+    -->
+
+    <img src="../images/user1.png" alt="John Doe" height="100">
+
+    <img src="/images/user2.png" alt="Jane Doe" height="100">
+
+
+
+  </body>
+</html>
