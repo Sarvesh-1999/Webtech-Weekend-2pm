@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        font-family: cursive;
+      }
+      #heading {
+        background-color: aqua;
+      }
+      .subHeading {
+        background-color: lightblue;
+      }
+      .heading-text {
+        color: white;
+      }
+      div {
+        background-color: yellow;
+      }
+
+      header,
+      #navbar,
+      .foot {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Learn Simple Selectors</h1>
+    <!-- 
+    There are 5 types:
+    1) id :-
+        - used to target unique element
+        - denoted by hash(#)
+
+    2) class :-
+        - used to target multiple same or diff elements
+        - denoted by dot(.)
+        - one element can have multiple class names
+
+    3) element :-
+        - used to target multiple same elements
+        - denoted by tagname (h1, p etc.)
+
+    4) group :-
+        - used to group multiple elements and apply same styling 
+        - denoted by comma(,)
+
+    5) universal :-
+        - used to target all elements present in document
+        - denoted by asterisk(*)
+
+    -->
+
+    <h2 id="heading">Target using ID</h2>
+
+    <h3 class="subHeading">Target using class</h3>
+    <h4 class="subHeading heading-text">Target using class</h4>
+    <h5 class="subHeading">Target using class</h5>
+
+    <div>Target using element</div>
+
+    <header>Target using group</header>
+    <nav id="navbar">Target using group</nav>
+    <footer class="foot">Target using group</footer>
+  </body>
+</html>
