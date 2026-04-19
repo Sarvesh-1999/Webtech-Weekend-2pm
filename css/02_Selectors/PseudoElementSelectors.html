@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p::first-letter {
+        font-size: 70px;
+        font-family: sans-serif;
+      }
+      p::first-line {
+        color: red;
+      }
+      p::selection {
+        background-color: yellow;
+        color: black;
+      }
+      h1::after {
+        content: "🩷";
+      }
+      h1::before {
+        content: "🫣";
+      }
+
+      ::marker{
+        color: red;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Learn Pesudo Element Selectors</h1>
+    <!-- 
+    1) ::first-letter
+    2) ::first-line
+    3) ::selection
+    4) ::marker
+    5) ::after
+    6) ::before
+    -->
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nemo facere
+      at expedita veniam, pariatur cum laborum ad unde qui amet commodi tenetur
+      quo inventore harum, sit minima eligendi magni ex aperiam? Illo, tenetur
+      voluptas fuga debitis quod obcaecati harum animi itaque vero unde natus
+      assumenda est iure maiores placeat ipsam, culpa quis, quos alias ex!
+      Magnam maxime repellendus impedit, exercitationem, provident deserunt
+      alias aliquam vitae architecto tempora minima? Non iste, explicabo
+      corporis, maiores error quos nam maxime odio illo reiciendis cupiditate a
+      possimus eligendi sunt fugiat commodi expedita incidunt ratione. A numquam
+      consectetur porro in quae delectus non quidem.
+    </p>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+    </ul>
+  </body>
+</html>

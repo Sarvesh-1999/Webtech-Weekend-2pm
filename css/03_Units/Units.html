@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+      }
+      .box2 {
+        height: 10vh;
+        width: 50vw;
+        background-color: blueviolet;
+      }
+      .parent {
+        height: 200px;
+        width: 800px;
+        background-color: orange;
+      }
+      .child {
+        height: 50%;
+        width: 50%;
+        background-color: black;
+      }
+
+      /* default 1em = 16px */
+      .box4 {
+        height: 1em;
+        width: 1em;
+        background-color: blue;
+        font-size: 50px; /* default 16px */
+      }
+
+      html {
+        font-size: 50px; /* default 16px */
+      }
+
+      /* default 1rem = 16px */
+      .box5 {
+        height: 1rem;
+        width: 1rem;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Learn CSS Units</h1>
+    <!-- 
+    There are 5 types
+    1) px :- Fixed Unit
+    2) vh and vw  :- Relative Unit
+    3) % :- Relative Unit
+    4) em :- Relative Unit
+    5) rem :- Relative Unit
+    -->
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+
+    <div class="box4"></div>
+
+    <div class="box5"></div>
+  </body>
+</html>

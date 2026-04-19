@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* only in new link for one time  */
+      a:link {
+        color: aqua;
+      }
+
+      a:visited {
+        color: black;
+      }
+
+      a:active {
+        color: lime;
+      }
+
+      h1:active {
+        background-color: red;
+        color: white;
+      }
+
+      button:hover {
+        background-color: black;
+        color: white;
+      }
+
+      ul > li:first-child {
+        background-color: orange;
+      }
+      ul > li:last-child {
+        background-color: green;
+      }
+      ul > li:nth-child(3) {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Learn Pesudo Class Selectors</h1>
+    <!-- 
+    they are represented using colon symbol -> :
+    1) :link <-- only used in anchor tag
+    2) :active
+    3) :visited   <-- only used in anchor tag
+    4) :hover
+    5) :first-child
+    6) :last-child
+    7) :nth-child()
+    -->
+
+    <a href="https://www.ajio.com">Ajio</a>
+
+    <br /><br />
+
+    <a href="https://www.healthkart.com">HealthKart</a>
+
+    <br /><br />
+
+    <button>Hover me</button>
+
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JS</li>
+      <li>REACT</li>
+      <li>NODE</li>
+    </ul>
+  </body>
+</html>

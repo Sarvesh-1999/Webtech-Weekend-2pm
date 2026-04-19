@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div[name] {
+        background-color: yellow;
+      }
+      div[name="box3"] {
+        background-color: red;
+      }
+      div[name~="box"] {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Attribute Selectors</h1>
+
+    <div name="box1">i am div</div>
+    <div name="box2 box">i am div</div>
+    <div name="box3">i am div</div>
+  </body>
+</html>
