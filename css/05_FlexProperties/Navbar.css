@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+/* .navbar {
+  padding: 20px 50px;
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+.nav-links {
+  margin-left: auto;
+  margin-right: 30px;
+}
+.nav-links > a {
+  text-decoration: none;
+  color: black;
+  margin: 0 20px;
+}
+.actions {
+  display: flex;
+  gap: 10px;
+} */
+
+.floating-navbar {
+  padding: 10px;
+  background-color: black;
+  width: 80vw;
+  border-radius: 50px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  box-shadow: 0 5px 5px gray;
+}
+.logo {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+.navlinks > a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0 20px;
+}
+.email-btn {
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 30px;
+}

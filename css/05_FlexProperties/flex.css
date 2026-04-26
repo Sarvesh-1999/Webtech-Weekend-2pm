@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 80vh;
+  width: 80vw;
+  background-color: lightblue;
+  margin: 10px auto;
+  display: flex;
+
+  flex-direction: row;
+
+  justify-content: center; 
+  /* X-AXIS :- flex-start, flex-end, center, space-between,space-around, space-evenly */
+
+  align-items: center; 
+  /* Y-AXIS :-  flex-start, flex-end, center */
+
+  gap: 50px;
+}
+.item {
+  height: 100px;
+  width: 100px;
+  background-color: royalblue;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  border: 2px solid black;
+}
