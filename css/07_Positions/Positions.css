@@ -1,0 +1,74 @@
+/* 
+! It is used to position html elements in our webpage. There are 5 types of position
+position : static (DEFAULT) / sticky / fixed / relative / absolute
+
+! To move html elements on our webpage we have 4 properties which is 
+top : 
+bottom : 
+left : 
+right : 
+
+! NOTE :- during static position the top/left/bottom/right properties will not work
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.box1 {
+  background-color: yellow;
+  position: static;
+  top: 100px;
+}
+
+.box2 {
+  background-color: lightblue;
+  position: sticky;
+  top: 0px; /* THRESHOLD POINT */
+}
+
+.box3 {
+  background-color: greenyellow;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.box4 {
+  background-color: lightpink;
+  position: relative;
+  left: 100px;
+  bottom: 50px;
+}
+
+.box5 {
+  background-color: aqua;
+  position: absolute;
+  right: 0;
+}
+
+.parent {
+  height: 50vh;
+  width: 50vw;
+  background-color: orange;
+  position: relative;
+}
+
+.child {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  position: absolute;
+  right: 0;
+}

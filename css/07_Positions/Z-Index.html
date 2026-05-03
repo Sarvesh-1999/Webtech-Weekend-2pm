@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        height: 200px;
+        width: 200px;
+        border: 2px solid black;
+        position: absolute;
+      }
+      .card1 {
+        background-color: red;
+        z-index: 1;
+      }
+      .card2 {
+        background-color: blue;
+        top: 50px;
+        left: 50px;
+        z-index: 3;
+      }
+      .card3 {
+        background-color: green;
+        top: 100px;
+        left: 100px;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card1"></div>
+    <div class="card2"></div>
+    <div class="card3"></div>
+  </body>
+</html>
