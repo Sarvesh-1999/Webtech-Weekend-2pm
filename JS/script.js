@@ -165,17 +165,153 @@
 //! HOISTING : moving declaration part at the top of the code internally
 //! TDZ : Temporal Dead Zone is the zone between accessing a let and const variables before initialization
 
-// var a = ud
-// let b  ---> value unavailable ---> Temporal Dead Zone
-// const c ---> value unavailable ---> Temporal Dead Zone
+// // var a = undefined; //HOISTED and initialized with undefined
+// console.log(a); // ud
+// console.log("Hii");// Hii
+// var a;
+// console.log(a); // ud
+// a = 10;
+// console.log(a); // 10
 
-console.log(a); // ud
-// console.log(b); //! ReferenceError: cannot access 'b' before initialization
+// // let a; //! TDZ --> HOISTED but cannot initialized with undefined
+// // console.log(a); //! ReferenceError: Cannot access 'a' before initialization
+// console.log("Hii"); // Hii
+// let a;
+// console.log(a); // ud
+// a = 10;
+// console.log(a); // 10
 
-var a = 10;
-let b = 20;
-const c = 30;
+//! GEC EXMAPLE 1
+// console.log("start");
+// console.log(a);
+// var a;
+// console.log(a);
+// a = 10;
+// console.log(a);
+// a = 60;
+// console.log(a);
+// console.log("end");
 
-console.log(a);
-console.log(b);
-console.log(c);
+//! GEC EXAMPLE 2
+// console.log("Start");
+// // console.log(b);//!ReferenceError: Cannot access 'b' before initialization
+// let b;
+// console.log(b);
+// b = 20;
+// console.log(b);
+// console.log("End");
+
+//! FUNCTIONS
+
+//! NAMED FUNCTION : FUNCTION WHICH HAS A NAME
+
+// greet(); // <--- due to function hoisting
+
+// function greet() {
+//   console.log("Welcome");
+// }
+
+// greet(); // function call
+
+//! FUNCTIONS WITH ARGUEMENTS AND PARAMETERS
+
+// function printFullName(firstName, lastName) {
+//   console.log(`My Fullname is ${firstName} ${lastName}`);
+// }
+// printFullName("John", "Doe");
+// printFullName("James", "Doe");
+
+// create a function to add two numeric values
+
+//! FUNCTION WITH DEFAULT PARAMETERS
+// function sum(n1 = 0, n2 = 0) {
+//   console.log(n1, n2);
+//   console.log(n1 + n2);
+// }
+// sum(10, 25);
+// sum();
+
+//! RETURN TYPE FUNCTION
+// function multiply(n1 = 1, n2 = 1) {
+//   return n1 * n2;
+// }
+
+// let val = multiply(5, 7);
+// console.log(`Multiple is --> ${val}`);
+
+//! ANONYMOUS FUNCTION : FUNCTION WITHOUT NAME
+// function () {}
+
+//! FUNCTIION EXPRESSION : USED TO CALL ANONYMOUS FUNCTION BY STORING IT INTO A VARIABLE
+// let a1 = function (x) {
+//   console.log("I am Function expression");
+//   return x + 50;
+// };
+// let val = a1(10);
+// console.log(val);
+
+// //! HIGHER ORDER FUNCTION
+// // 1) a function should return another function
+// function HOF1() {
+//   return function () {};
+// }
+
+// // 2) a function should accept another function as arguement
+// function HOF2() {}
+// HOF2(function () {});
+
+// //! CALLBACK FUNCTION
+// // a function which passes as an arguement
+// function Demo() {}
+// Demo(function callback() {});
+
+//! NESTED FUNCTION
+// ! CLOSURE : its a temporary memory which is created whenever we access Parent's function property inside Child function
+
+// function Parent() {
+//   let a = 10;
+//   console.log(a);
+
+//   function Child() {
+//     let b = 20;
+//     console.log(b, a); // 'a' can be access due to closure
+//   }
+
+//   Child();
+// }
+// Parent();
+
+//! ARROW FUNCTION : USED FOR SHORTER SYNTAX , INTODUCED IN ES6 VERSION
+
+// let a1 = () => {
+//   console.log("I am Arrow function 1");
+// };
+
+// a1();
+
+// let a2 = () => console.log("I am Arrow Function 2");
+// a2();
+
+// let a3 = () => {
+//   return "I am Explicit Return";
+// };
+// console.log(a3());
+
+// let a4 = () => "I am Implicit Return";
+// console.log(a4());
+
+// let a5 = () => ({ name: "Java" });
+// console.log(a5());
+
+//! CONSTRUCTOR FUNCTION : USED TO CREATE OBJECTS
+function Student(name = "Not Available") {
+  this.studentName = name;
+}
+
+let s1 = new Student("Raj");
+let s2 = new Student("Rahul");
+let s3 = new Student();
+
+console.log(s1);
+console.log(s2);
+console.log(s3);
