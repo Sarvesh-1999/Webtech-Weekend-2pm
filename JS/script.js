@@ -304,14 +304,253 @@
 // console.log(a5());
 
 //! CONSTRUCTOR FUNCTION : USED TO CREATE OBJECTS
-function Student(name = "Not Available") {
-  this.studentName = name;
-}
+// function Student(name = "Not Available") {
+//   this.studentName = name;
+// }
 
-let s1 = new Student("Raj");
-let s2 = new Student("Rahul");
-let s3 = new Student();
+// let s1 = new Student("Raj");
+// let s2 = new Student("Rahul");
+// let s3 = new Student();
 
-console.log(s1);
-console.log(s2);
-console.log(s3);
+// console.log(s1);
+// console.log(s2);
+// console.log(s3);
+
+//! ARRAYS are collection of multiple data, In JS arrays are heterogenous
+
+// let arr = [10, "hello", true, undefined, null, function () {}];
+// //          0     1       2        3      4       5
+// console.log(arr);
+// console.log(arr[1]);
+
+// console.log(arr.length); // 6
+
+//! ARRAY METHODS
+// let arr1 = [10, 20, 30, 40, 50];
+// console.log(arr1);
+
+// //! push() : appends elements at the end of an array
+// arr1.push(60, 70, 80);
+// console.log(arr1);
+
+// //! pop() : removes element from last index
+// arr1.pop();
+// console.log(arr1);
+
+// //! unshift() : appends elements at the first of an array
+// arr1.unshift(100, 200, 300);
+// console.log(arr1);
+
+// //! shift() : removes element from 0th index
+// arr1.shift();
+// console.log(arr1);
+
+//! slice(startPos , endPos) : it used to extract a copy of an original array
+//--> Note : it excludes endPos
+
+// //          -4  -3  -2  -1
+// let arr2 = [10, 20, 30, 40];
+// //           0   1   2   3
+
+// console.log(arr2.slice(1, 3)); // [20, 30]
+// console.log(arr2.slice(1)); // [20, 30, 40]
+// console.log(arr2.slice(-4, -1)); // [10, 20, 30]
+// console.log(arr2.slice(1, -1)); // [20, 30]
+
+//! splice(startPos , deleteCount , newElements) : used to add and remove the elements, it modifies the original array
+// let arr3 = [10, 20, 30, 40, 50];
+
+//! remove
+// arr3.splice(1, 3);
+// console.log(arr3); // [10, 50]
+
+//! add : [10, 20, 30, 35, 36, 40, 50];
+// arr3.splice(3, 0, 35, 36);
+// console.log(arr3);
+
+//! add and remove : [10, 20, 100, 50];
+// arr3.splice(2, 2, 100);
+// console.log(arr3); // [10, 20, 100, 50]
+
+// let arr4 = [10, 20, 30, 40];
+
+// //! forEach(()=>{}) : loops through on array and performs task on it. it returns undefined
+// let val1 = arr4.forEach((ele, idx, arr) => {
+//   console.log(ele, idx, arr);
+//   return ele + 5;
+// });
+// console.log(val1); // undefined
+
+// //! map(()=>{}) : used to transform an array and return a new array without changing the original array
+// let val2 = arr4.map((ele, idx, arr) => {
+//   console.log(ele, idx, arr);
+//   return ele + 5;
+// });
+// console.log(val2); // [15,25,35,45]
+
+// //! filter(()=>{}) : it creates a new array containing elements which satisfies the given condition
+// let val3 = arr4.filter((ele, idx, arr) => {
+//   return ele > 20;
+// });
+// console.log(val3); // [30, 40]
+
+// //! find(()=>{}) : returns the first element which satisfies the condition
+// let val4 = arr4.find((ele, idx, arr) => {
+//   return ele > 20;
+// });
+// console.log(val4); // 30
+
+// //! findIndex(()=>{}) : returns the index of first element which satisfies the condition
+// let val5 = arr4.findIndex((ele, idx, arr) => {
+//   return ele > 20;
+// });
+// console.log(val5); // 2
+
+//! OBJECTS : it is used to store data in the form of key and value pairs
+// Each key and value pair is known as property
+// If we store function inside an object it is known as method
+
+// let obj = {
+//   name: "Henry",
+//   age: 20,
+//   isLoggedIn: false,
+//   greet: function () {
+//     console.log("I am Method");
+//   },
+// };
+
+// console.log(obj.name); // Henry
+// obj.greet();
+
+//! CRUD USING OBJECTS
+
+// //! CREATE
+// let obj1 = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 25,
+// };
+// console.log(obj1);
+
+// //! READ
+// console.log(obj1.firstName); // John
+
+// //! UPDATE
+// obj1.age = 30;
+// console.log(obj1.age);
+
+// //! CREATE NEW PROPERTY
+// obj1.isMarried = true;
+// obj1.demo = null;
+// console.log(obj1);
+
+// //! DELETE
+// delete obj1.demo
+// console.log(obj1);
+
+//! OBJECT METHODS
+// let obj2 = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 25,
+// };
+// //! Object.keys()
+// console.log(Object.keys(obj2)); //  ['firstName', 'lastName', 'age']
+
+// //! Object.values()
+// console.log(Object.values(obj2)); // ['John', 'Doe', 25]
+
+// //! Object.entries()
+// let entries = Object.entries(obj2);
+// console.log(entries);// [ ["firstName" , "John"] , ["lastName" , "Doe"] , ["age" , 25] ]
+
+// //! Object.fromEntries()
+// let val = Object.fromEntries(entries);
+// console.log(val); // {firstName: 'John', lastName: 'Doe', age: 25}
+
+//! SHALLOW COPY AND DEEP COPY
+// let obj1 = {
+//   name: "John",
+//   age: 20,
+//   address: { city: "Delhi" },
+// };
+
+// // let obj2 = { ...obj1 }; // shallow copy
+// let obj2 = structuredClone(obj1); // deep copy
+
+// obj2.age = 30;
+// obj2.address.city = "Noida";
+
+// console.log("obj1 ---> ", obj1);
+// console.log("obj2 ---> ", obj2);
+
+// Sarvesh 0987654321
+// Neo5g 1234554321
+
+//! PROMISE
+
+// let p1 = fetch("https://dummyjson.com/todos");
+// console.log(p1);
+
+// p1.then((resp) => {
+//   let p2 = resp.json();
+//   console.log(p2);
+
+//   p2.then((data) => {
+//     console.log(data.todos);
+//   });
+// });
+
+// p1.catch((err) => {
+//   console.log(err);
+// });
+
+//! ASYNC AND AWAIT
+
+// async function getProducts() {
+//   try {
+//     let resp = await fetch("https://dummyjson.com/products");
+//     let data = await resp.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+// getProducts();
+
+// ! setInterval() and setTimeout()
+
+// console.log("Start");
+
+// setTimeout(() => {
+//   console.log("Timeout 1");
+// }, 5000);
+
+// let intervalID = setInterval(() => {
+//   console.log("Interval ⭐");
+// }, 2000);
+
+// setTimeout(() => {
+//   console.log("interval stopped");
+//   clearInterval(intervalID)
+// }, 10000);
+
+// console.log("End");
+
+//! EVENT LOOPS
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Timeout 1");
+}, 2000);
+
+Promise.resolve().then(() => {
+  console.log("Promise 1");
+});
+
+setTimeout(() => {
+  console.log("Timeout 2");
+}, 0);
+
+console.log("END");
